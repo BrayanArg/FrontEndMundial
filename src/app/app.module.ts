@@ -9,6 +9,8 @@ import {MatTableModule} from '@angular/material/table'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 import { MatCardModule } from '@angular/material/card'
 import { PartidosComponent } from './Components/partidos/partidos.component'
@@ -18,9 +20,6 @@ import { Routes, RouterModule } from '@angular/router'
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JugadoresComponent } from './Components/jugadores/jugadores.component';
-import { PosicionesComponent } from './Components/posiciones/posiciones.component';
-
-
 const rutas: Routes = [
   { path: 'partidos', component: PartidosComponent },
   { path: 'login', component: LoginComponent },
@@ -49,7 +48,11 @@ const rutas: Routes = [
     MatFormFieldModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(rutas),
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
