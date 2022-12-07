@@ -4,6 +4,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { AppComponent } from './app.component'
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component'
 import { FooterComponent } from './Components/footer/footer.component'
+import {MatTableModule} from '@angular/material/table'
 
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
@@ -17,10 +18,14 @@ import { Routes, RouterModule } from '@angular/router'
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JugadoresComponent } from './Components/jugadores/jugadores.component';
+import { PosicionesComponent } from './Components/posiciones/posiciones.component';
+
+
 const rutas: Routes = [
   { path: 'partidos', component: PartidosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'jugadores', component: JugadoresComponent },
+  { path: 'posiciones', component: PosicionesComponent }
 ]
 
 @NgModule({
@@ -31,6 +36,8 @@ const rutas: Routes = [
     PartidosComponent,
     LoginComponent,
     JugadoresComponent,
+    PosicionesComponent
+    
   ],
   imports: [
     BrowserModule,
